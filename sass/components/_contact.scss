@@ -1,0 +1,54 @@
+/*Номер телефона и электронная почта*/
+.contact {
+  margin-left: auto;
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item:not(:last-child) {
+    @media screen and (min-width: $tablet) and (max-width: $desktop) {
+      margin-bottom: 10px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-right: 50px;
+    }
+  }
+
+  &__link:hover .contact__icon,
+  &__link:focus .contact__icon,
+  &__link:active .contact__icon,
+  &__link:hover .icon__mail,
+  &__link:focus .icon__mail,
+  &__link:active .icon__mail {
+    fill: var(--hover-color);
+  }
+}
+@media screen and (max-width: $tablet) {
+  .contact--desktop {
+    display: none;
+  }
+}
+.contact__link {
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-content: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+.contact__icon {
+  margin-right: 10px;
+  width: 10px;
+  height: 16px;
+  fill: var(--text-color);
+  transition: fill var(--animation-duration);
+}
+.icon__mail {
+  width: 16px;
+  height: 12px;
+  fill: var(--text-color);
+  transition: fill var(--animation-duration);
+}

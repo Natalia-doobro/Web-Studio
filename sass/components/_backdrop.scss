@@ -1,0 +1,21 @@
+/*бекдроп*/
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 8;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity var(--animation-duration);
+
+  @media screen and (max-width: $desktop) {
+    overflow-y: scroll;
+  }
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}

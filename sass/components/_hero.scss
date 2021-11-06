@@ -1,0 +1,102 @@
+/*Шапка*/
+.hero {
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/imgfon.jpg");
+  background-color: var(--dark-bg-color);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  /*@media screen and (max-width: $tablet) {
+    max-width: $mobile;
+  }
+  @media screen and (min-width: $tablet) {
+    max-width: $tablet;
+  }
+  @media screen and (min-width: $desktop) {
+    max-width: 1600px;
+  }*/
+}
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/fon/imgfon@2x.jpg");
+  }
+}
+.hero-container {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+.hero__title {
+  display: block;
+  width: 100%;
+  max-width: 696px;
+  margin-left: auto;
+  margin-right: auto;
+
+  color: var(--dark-bg-text-color);
+  font-weight: 900;
+
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+
+  @media screen and (max-width: $tablet) {
+    font-size: 26px;
+    line-height: 1.62;
+  }
+  @media screen and (min-width: $tablet) {
+    font-size: 44px;
+    line-height: 1.37;
+  }
+}
+
+.button {
+  padding: 10px 32px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background: var(--button-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: var(--dark-bg-text-color);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.8;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+
+  transition: color var(--animation-duration),
+    background-color var(--animation-duration);
+
+  &:active,
+  &:hover,
+  &:focus {
+    --button-color: #ffffff;
+    color: var(--hover-color);
+  }
+  &:hover .icon,
+  &:focus .icon,
+  &:active .icon {
+    fill: var(--hover-color);
+  }
+}
